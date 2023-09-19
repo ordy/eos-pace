@@ -15,7 +15,7 @@
   </form>
       <button mat-raised-button color="primary" (click)="calculatePace()" [disabled]="!isValid()">Pace</button>
   </mat-card>
-  <div class="pace-results" *ngIf="true">
+  <div class="pace-results" *ngIf="showResults">
       <mat-list>
         <mat-list-item>
           <span matListItemTitle>{{ pst_time }}</span>
