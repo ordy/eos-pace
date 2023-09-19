@@ -68,7 +68,10 @@ export class AppComponent implements OnInit {
     this.calculateResetsLeft();
     this.calculateExercisesLeft();
     this.eos_score = +this.current_score + +(10*this.exercises_left);
-    this.bonus = this.current_ex > 0 ? 1 : 0;
+    if (this.current_ex == 0)
+      this.bonus = 0;
+    else
+      this.bonus = this.current_ex > 5 ? 2 : 1;
     this.pace[0] = this.eos_score - this.resets_left*1 - this.bonus;
     this.pace[1] = this.eos_score;
     this.pace[2] = this.eos_score + this.resets_left*1 + this.bonus;
