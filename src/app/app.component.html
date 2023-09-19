@@ -1,0 +1,29 @@
+<div>
+  <mat-card>
+    <mat-card-title>{{title}}</mat-card-title>
+  <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <mat-label>Exercices</mat-label>
+    <input matInput placeholder="" type="number" min=0 max=10 required name="exercices" [(ngModel)]="current_ex">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Score</mat-label>
+    <input matInput placeholder="" type="number" min=0 required name="score" [(ngModel)]="current_score">
+  </mat-form-field>
+</form>
+</mat-card>
+    <button mat-raised-button color="primary" (click)="calculatePace()" [disabled]="!isValid()">Pace</button>
+</div>
+<div class="pace-results" *ngIf="showResults">
+  <p class="info"><b>Server Time:</b> {{ pst_time }}</p>
+  <p><b>Resets left:</b> {{ resets_left }}</p>
+  <p><b>Days left:</b> {{ days_left }}</p>
+  <p><b>Exercices left:</b> {{ exercises_left }}</p>
+  <div class="scores">
+    <p>-1 = {{ pace[0] }}</p>
+    <p>+0 = {{ pace[1] }}</p>
+    <p>+1 = {{ pace[2] }}</p>
+    <p>+2 = {{ pace[3] }}</p>
+  </div>
+</div>

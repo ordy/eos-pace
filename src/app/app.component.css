@@ -1,0 +1,32 @@
+mat-card {
+	margin: 2em;
+	max-width: fit-content;
+}
+
+form {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+mat-form-field {
+	margin-right: 0.4em;
+}
+
+mat-card-title {
+	margin: 1em;
+}
+
+button {
+	padding-left: 3em;
+	padding-right: 3em;
+	margin-left: 2em;
+}
+
+.pace-results {
+	margin: 2em;
+	font-size: 1.1em;
+}
+
+.scores {
+	font-family: monospace;
+}
