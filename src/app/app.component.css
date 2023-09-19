@@ -1,5 +1,22 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.info-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 1em;
+}
+.calc-container {
+	display: flex;
+	flex-direction: column;
+}
+
 mat-card {
-	margin: 2em;
+	margin: 1em;
+	margin-top: 2em;
 	max-width: fit-content;
 }
 
@@ -16,17 +33,17 @@ mat-card-title {
 	margin: 1em;
 }
 
+mat-list {
+	display: flex;
+}
+
 button {
-	padding-left: 3em;
-	padding-right: 3em;
-	margin-left: 2em;
+	margin: 1em;
 }
 
 .pace-results {
+	display: flex;
+	flex-direction: column;
 	margin: 2em;
 	font-size: 1.1em;
-}
-
-.scores {
-	font-family: monospace;
 }

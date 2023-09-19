@@ -5,6 +5,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list'
 import { NgIf } from '@angular/common';
 import { Time } from './model/time';
 
@@ -14,7 +15,7 @@ import { Time } from './model/time';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [FormsModule, MatFormFieldModule, MatInputModule, HttpClientModule,MatCardModule, MatButtonModule, NgIf],
+  imports: [FormsModule, MatFormFieldModule, MatInputModule, HttpClientModule,MatCardModule, MatButtonModule, NgIf, MatListModule],
 })
 export class AppComponent implements OnInit {
   public title:string = 'EoS Calculator';
