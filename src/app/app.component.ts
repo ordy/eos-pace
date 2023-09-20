@@ -96,15 +96,17 @@ export class AppComponent implements OnInit {
 	}
 
 	public calculatePace(): void {
-		this.calculateDaysLeft();
-		this.calculateResetsLeft();
-		this.calculateExercisesLeft();
-		this.calculateScore(this.current_score, this.exercises_left);
-		this.pace[0] = this.eos_score - this.resets_left * 1 - Math.floor(this.current_ex/5);
-		this.pace[1] = this.eos_score;
-		this.pace[2] = this.eos_score + this.resets_left * 1 + Math.floor(this.current_ex/5);
-		this.pace[3] = this.eos_score + this.resets_left * 2 + Math.floor(this.current_ex/5)* 2;
-		this.showResults = true;
+		if(!this.isValid()) {
+			this.calculateDaysLeft();
+			this.calculateResetsLeft();
+			this.calculateExercisesLeft();
+			this.calculateScore(this.current_score, this.exercises_left);
+			this.pace[0] = this.eos_score - this.resets_left * 1 - Math.floor(this.current_ex/5);
+			this.pace[1] = this.eos_score;
+			this.pace[2] = this.eos_score + this.resets_left * 1 + Math.floor(this.current_ex/5);
+			this.pace[3] = this.eos_score + this.resets_left * 2 + Math.floor(this.current_ex/5)* 2;
+			this.showResults = true;
+		}
 	}
 
 	public isValid(): boolean {

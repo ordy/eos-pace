@@ -14,12 +14,13 @@
 						required
 						name="exercises"
 						formControlName="exercises"
+						(keydown.enter)="calculatePace()" 
 						[(ngModel)]="current_ex" />
 				</mat-form-field>
 
 				<mat-form-field>
 					<mat-label>Score</mat-label>
-					<input matInput placeholder="" type="number" min="0" max="3000" required name="score" formControlName="score" [(ngModel)]="current_score" />
+					<input matInput placeholder="" (keydown.enter)="calculatePace()" type="number" min="0" max="3000" required name="score" formControlName="score" [(ngModel)]="current_score" />
 				</mat-form-field>
 			</form>
 			<button mat-raised-button color="primary" (click)="calculatePace()" [disabled]="isValid()">Pace</button>
