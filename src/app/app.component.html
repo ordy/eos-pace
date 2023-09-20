@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="calc-container">
-		<mat-card>
+		<mat-card class="calc-input">
 			<mat-card-title>{{ title }}</mat-card-title>
 			<form [formGroup]="paceForm">
 				<mat-form-field>
@@ -26,7 +26,7 @@
 			<button mat-raised-button color="primary" (click)="calculatePace()" [disabled]="isValid()">Pace</button>
 		</mat-card>
 		<div class="pace-results" *ngIf="showResults">
-			<mat-list>
+			<mat-list class="server-info">
 				<mat-list-item>
 					<span matListItemTitle>{{ pst_time }}</span>
 					<span matListItemLine>Server time</span>
@@ -40,6 +40,7 @@
 					<span matListItemLine>Exercises left</span>
 				</mat-list-item>
 			</mat-list>
+			<mat-card>
 			<mat-list class="scores">
 				<mat-list-item>
 					<span matListItemTitle>{{ pace[0] }}</span>
@@ -58,6 +59,7 @@
 					<span matListItemLine>+2</span>
 				</mat-list-item>
 			</mat-list>
+			</mat-card>
 		</div>
 	</div>
 </div>

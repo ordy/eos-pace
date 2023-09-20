@@ -7,10 +7,13 @@
 	flex-direction: column;
 }
 
-mat-card {
+mat-card.calc-input {
 	margin: 1em;
 	margin-top: 2em;
-	max-width: fit-content;
+}
+
+mat-card {
+	margin: 1em;
 }
 
 form {
@@ -30,6 +33,10 @@ mat-list {
 	display: flex;
 }
 
+mat-list.server-info {
+	margin-left: 1em;
+}
+
 button {
 	margin: 1em;
 }
@@ -37,6 +44,5 @@ button {
 .pace-results {
 	display: flex;
 	flex-direction: column;
-	margin: 2em;
 	font-size: 1.1em;
 }
