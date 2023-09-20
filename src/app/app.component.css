@@ -3,14 +3,7 @@
 	justify-content: center;
 }
 
-.info-container {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin: 1em;
-}
 .calc-container {
-	display: flex;
 	flex-direction: column;
 }
 
